@@ -27,12 +27,13 @@ private bool _isGrounded = true;
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Space)&& _isGrounded)
      {
          _isGrounded = false;
 
          _rigidbody.velocity = new Vector2(
-             _rigidbody.velocity.x,
+             _rigidbody.velocity.y,
              _jump
          );
 
@@ -45,5 +46,7 @@ private bool _isGrounded = true;
     {
         _isGrounded = true;
     }
+
+        
     }
 }
